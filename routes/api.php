@@ -12,4 +12,10 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::apiResource('tasks', TaskController::class);
+Route::get('tasks', [TaskController::class, 'index']);
+Route::post('tasks', [TaskController::class, 'store']);
+Route::put('tasks/{operation_id}', [TaskController::class, 'update']);
+Route::delete('tasks/{operation_id}', [TaskController::class, 'destroy']);
+
+// Route::apiResource('tasks', TaskController::class);
+

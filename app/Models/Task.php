@@ -29,5 +29,10 @@ class Task extends Model
         'is_done' => 'boolean',
     ];
 
+    public function getRouteKeyName()
+    {
+        return 'operation_id';
+    }
+    
     // ...vous pouvez ajouter des relations ou des méthodes ici...
 }
